@@ -1,32 +1,78 @@
-# React + TypeScript + Vite
+# ☕ Cafe Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, full-stack cafe management system designed to streamline cafe operations across customers, staff, kitchen, and administrators.
 
-Currently, two official plugins are available:
+The application provides separate workflows for ordering, menu management, order processing, staff management, analytics, and cafe operations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👤 Customer
+- Secure authentication
+- Browse cafe menu
+- Add items to cart
+- Place orders
+- View order history
+- Track orders
 
-## Expanding the Oxlint configuration
+### 🛠️ Admin
+- Admin dashboard
+- Menu management
+- Order management
+- Staff management
+- Sales and operational analytics
+- Cafe management
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### 👨‍🍳 Kitchen
+- Kitchen dashboard
+- View incoming orders
+- Manage order preparation workflow
+- Monitor active orders
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+### 🏪 Cafe Management
+- Centralized cafe dashboard
+- Role-based application experience
+- Real-time data integration through Supabase
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 🎨 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React | Frontend UI |
+| TypeScript | Type-safe development |
+| Vite | Development & build tooling |
+| Supabase | Backend & database |
+| Lucide React | Icons |
+| CSS | UI styling |
+
+---
+
+## 📁 Project Structure
+
+```text
+cafe/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── admin/
+│   │   ├── cafe/
+│   │   ├── common/
+│   │   ├── customer/
+│   │   └── kitchen/
+│   ├── context/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.tsx
+│   ├── supabaseClient.ts
+│   └── types.ts
+├── supabase/
+│   └── schema.sql
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
